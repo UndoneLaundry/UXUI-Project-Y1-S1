@@ -1,0 +1,210 @@
+/* ======================
+   CSS Variables & Base Styles
+   ====================== */
+:root {
+    --primary: #8A2BE2; /* Purple */
+    --secondary: #00B4D8; /* Teal */
+    --accent: #FF6B6B; /* Coral */
+    --dark: #0F0F1B; /* Dark blue */
+    --medium: #1A1A2E; /* Medium dark */
+    --light: #F8F9FA; /* Light background/text */
+    --gray: #6C757D; /* Gray text */
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        --card-bg-front: #1A1A2E; /* Lighter background for card front */
+    --card-bg-back: #262940; /* Even lighter background for card back */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark);
+    color: var(--light);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ======================
+   Animation Keyframes
+   ====================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main sections styles */
+.scroll-container {
+    padding-top: 80px; /* Add space for fixed header */
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    background: linear-gradient(to right, var(--secondary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 3rem;
+}
+
+/* Flip Card Specific Styles */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.flip-card {
+    background-color: transparent;
+    height: 350px;
+    perspective: 1000px; /* 3D effect */
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card.is-flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.flip-card-front {
+    background-color: var(--card-bg-front);
+    color: var(--light);
+}
+
+.flip-card-back {
+    background-color: var(--card-bg-back);
+    color: var(--light);
+    transform: rotateY(180deg);
+}
+
+.achievement-icon {
+    font-size: 3rem;
+    color: var(--secondary); /* Accent color */
+    margin-bottom: 1rem;
+}
+
+.flip-card-front h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--light);
+    margin-bottom: 0.5rem;
+}
+
+.achievement-category {
+    font-weight: 600;
+    color: var(--gray);
+}
+
+.flip-card-back p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: var(--gray);
+}
+
+.achievement-date {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--gray);
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 3.2rem; /* Slightly smaller heading */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adjust hero text for mobile */
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    /* Stack buttons vertically on mobile */
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    /* Reduce section padding */
+    section {
+        padding: 70px 0;
+    }
+}

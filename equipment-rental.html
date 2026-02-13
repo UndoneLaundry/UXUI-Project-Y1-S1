@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment Rental | Multimedia Club</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Your existing CSS links -->
+    <link rel="stylesheet" href="css/nav-bar-footer.css">
+    <link rel="stylesheet" href="css/main-page.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    select.form-select, 
+select.form-select option {
+    background-color: var(--medium) !important;
+    color: var(--light) !important;
+}
+
+select.form-select:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 0.25rem rgba(0, 180, 216, 0.25);
+}
+
+/* Style the dropdown arrow */
+select.form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='%23ffffff' fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+}
+
+/* Override Bootstrap styles for footer */
+footer .container .footer-grid .footer-col ul {
+    padding-left: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+footer .container .footer-grid .footer-col ul li {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-bottom: 12px !important;
+    list-style: none !important;
+}
+
+footer .container .footer-grid .footer-col ul li a {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    color: var(--gray) !important;
+    text-decoration: none !important;
+}
+</style>
+<body>
+    <!-- Same Header as Other Pages -->
+    <header>
+        <div class="container header-container">
+            <a href="main-page.html" class="logo">
+                <i class="fas fa-play-circle"></i>
+                <span>Multimedia Club</span>
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="main-page.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="Equipment-page.html" class="active">Equipments</a></li>
+                    <li><a href="Achievement-page.html">Achievements</a></li>
+                    <li><a href="FAQ-page.html">FAQ</a></li>
+                    <li><a href="Sign-up.html">Sign up</a></li>
+                </ul>
+            </nav>
+            
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section for Rental Page -->
+    <section class="rental-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Gear Up For Creativity</h1>
+                <p>Borrow professional equipment for your multimedia projects</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rental Section -->
+    <section class="rental-section py-5" style="background-color: var(--medium);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Equipment Rental</h2>
+                <p>Reserve our gear for your next project</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="rental-card p-4" style="background: rgba(255, 255, 255, 0.03); border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.05);">
+                        <h3 class="mb-4" style="color: var(--secondary);">Rental Form</h3>
+                        
+                        <form id="rentalForm">
+                            <div class="mb-3">
+                                <label for="adminNumber" class="form-label" style="color: var(--light);">Student Admin Number</label>
+                                <input type="text" class="form-control" id="adminNumber" required 
+                                       style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--light);">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="email" class="form-label" style="color: var(--light);">Email Address</label>
+                                <input type="email" class="form-control" id="email" required 
+                                       style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--light);">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="equipment" class="form-label" style="color: var(--light);">Equipment</label>
+                                <select class="form-select" id="equipment" required 
+                                        style="background: rgba(240, 236, 236, 0.05); border: 1px solid rgba(207, 196, 196, 0.1); color: var(--light);">
+                                    <option value="" disabled selected>Select equipment</option>
+                                    <option value="DSLR Camera">DSLR Camera (Canon EOS R5)</option>
+                                    <option value="Tripod">Tripod (Manfrotto MT190X)</option>
+                                    <option value="Microphone">Microphone (Rode NT-USB)</option>
+                                    <option value="Lighting Kit">Lighting Kit (Aputure 300D)</option>
+                                    <option value="Gimbal">Gimbal (DJI Ronin-S)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="form-label" style="color: var(--light);">Rental Duration: <span id="durationValue">3</span> days</label>
+                                <input type="range" class="form-range" id="duration" min="1" max="7" value="3" 
+                                       style="background: transparent; accent-color: var(--secondary);">
+                            </div>
+                            
+                            <button type="submit" class="btn w-100" 
+                                    style="background: linear-gradient(45deg, var(--secondary), var(--primary)); color: white; border: none; padding: 12px; border-radius: 50px;">
+                                Submit Rental Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Multimedia Club</h3>
+                    <p>Empowering creators through technology and collaboration since 2018</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="upcoming-events.html">Upcoming Events</a></li>
+                        <li><a href="equipment-rental.html">Equipment Rental</a></li>
+                        <li><a href="Gallery-page.html">View Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Club hours</h4>
+                            <li>
+                                <span>Monday - Thursday</span>
+                                <span>3:00 PM - 8:00 PM</span>
+                            </li>
+                            <li>
+                                <span>Friday</span>
+                                <span>2:00 PM - 6:00 PM</span>
+                            </li>
+                            <li>
+                                <span>Saturday</span>
+                                <span>10:00 AM - 4:00 PM</span>
+                            </li>
+                            <li>
+                                <span>Sunday</span>
+                                <span>Closed</span>
+                            </li>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2025 Multimedia Club | Built with 🔐 by I-Je</p>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Mobile navigation toggle (only define this once)
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.querySelector('.mobile-toggle');
+            const nav = document.querySelector('nav');
+            
+            if (mobileToggle && nav) {
+                mobileToggle.addEventListener('click', () => {
+                    nav.classList.toggle('active');
+                    const icon = mobileToggle.querySelector('i');
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                });
+            }
+
+            // Duration slider update
+            const durationSlider = document.getElementById('duration');
+            const durationValue = document.getElementById('durationValue');
+            if (durationSlider && durationValue) {
+                durationSlider.addEventListener('input', () => {
+                    durationValue.textContent = durationSlider.value;
+                });
+            }
+
+            // Form submission
+            const rentalForm = document.getElementById('rentalForm');
+            if (rentalForm) {
+                rentalForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    // Get form values
+                    const adminNumber = document.getElementById('adminNumber').value;
+                    const email = document.getElementById('email').value;
+                    const equipment = document.getElementById('equipment').value;
+                    const duration = document.getElementById('duration').value;
+                    
+                    // Show success message (using correct template literals)
+                    alert(`Rental request submitted!\n\nAdmin: ${adminNumber}\nEmail: ${email}\nEquipment: ${equipment}\nDuration: ${duration} days`);
+                    
+                    // Reset form
+                    rentalForm.reset();
+                    durationValue.textContent = '3';
+                    durationSlider.value = '3';
+                });
+            }
+
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (header) {
+                    if (window.scrollY > 100) {
+                        header.style.backgroundColor = 'rgba(10, 10, 20, 0.98)';
+                        header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
+                    } else {
+                        header.style.backgroundColor = 'rgba(15, 15, 27, 0.95)';
+                        header.style.boxShadow = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

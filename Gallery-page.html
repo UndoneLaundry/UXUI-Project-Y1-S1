@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Multimedia Club</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Gallery-page.css">
+    <link rel="stylesheet" href="css/nav-bar-footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body> 
+<button id="scrollTopBtn" type="button" class="scroll-top-btn d-none" aria-label="Scroll to top">
+    <span class="chevron-up" aria-hidden="true">
+        <svg width="32" height="20" viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="6,16 16,6 26,16" stroke="#18d0ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+    </span>
+</button>
+    <header>
+        <div class="container header-container">
+            <a href="main-page.html" class="logo">
+                <i class="fas fa-play-circle"></i>
+                <span>Multimedia Club</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="main-page.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="Equipment-page.html">Equipments</a></li>
+                    <li><a href="Achievement-page.html">Achievements</a></li>
+                    <li><a href="FAQ-page.html">FAQ</a></li>
+                    <li><a href="Sign-up.html">Sign up</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="gallery-grid-section">
+            <div class="container">
+                <h2 class="gallery-heading">Explore Our Work</h2>
+                <div class="search-container">
+                    <input type="text" class="search-bar" placeholder="Search photos...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div class="filter-container">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="event">Events</button>
+                    <button class="filter-btn" data-filter="workshop">Workshops</button>
+                    <button class="filter-btn" data-filter="equipment">Equipment</button>
+                    <button class="filter-btn" data-filter="member">Members</button>
+                </div>
+    <div class="photo-grid">
+        <!-- Event Category -->
+        <div class="photo-item" data-category="event">
+            <img src="media/images/Club-Event-Photograph.jpg" alt="Club event photography">
+            <div class="photo-description">Annual Multimedia Club photography competition with members showcasing their best work</div>
+        </div>
+        <div class="photo-item" data-category="event">
+            <img src="media/images/Group-Photo.jpg" alt="Group photo with awards">
+            <div class="photo-description">Club members celebrating competition wins with their awards</div>
+        </div>
+        <div class="photo-item" data-category="event">
+            <img src="media/images/Live-Event-Coverage.jpg" alt="Live event coverage">
+            <div class="photo-description">Members covering the university's annual cultural festival</div>
+        </div>
+        <div class="photo-item" data-category="event">
+            <img src="media/images/Final-Project-Showcase.jpg" alt="Final project showcase">
+            <div class="photo-description">End-of-year exhibition of student multimedia projects</div>
+        </div>
+
+        <!-- Workshop Category -->
+        <div class="photo-item" data-category="workshop">
+            <img src="media/images/Studio-Lighting-Workshop.jpg" alt="Studio lighting workshop">
+            <div class="photo-description">Professional photographer teaching lighting techniques</div>
+        </div>
+        <div class="photo-item" data-category="workshop">
+            <img src="media/images/Club-Workshop.jpg" alt="Club workshop in progress">
+            <div class="photo-description">Hands-on camera operation workshop for beginners</div>
+        </div>
+        <div class="photo-item" data-category="workshop">
+            <img src="media/images/Video-Editing-Tutorial.jpg" alt="Video editing tutorial">
+            <div class="photo-description">Adobe Premiere Pro tutorial session for members</div>
+        </div>
+        <div class="photo-item" data-category="workshop">
+            <img src="media/images/Lighting-Technique.jpg" alt="Lighting technique demo">
+            <div class="photo-description">Demonstration of three-point lighting setup</div>
+        </div>
+
+        <!-- Equipment Category -->
+        <div class="photo-item" data-category="equipment">
+            <img src="media/images/Camera-Equipment-Setup.jpg" alt="Camera equipment setup">
+            <div class="photo-description">Our professional DSLR and mirrorless camera collection</div>
+        </div>
+        <div class="photo-item" data-category="equipment">
+            <img src="media/images/Editing-Workstation.jpg" alt="Editing workstation">
+            <div class="photo-description">High-performance editing stations with dual monitors</div>
+        </div>
+        <div class="photo-item" data-category="equipment">
+            <img src="media/images/Camera-Rig-Setup.jpg" alt="Camera rig setup">
+            <div class="photo-description">Professional cinema camera rig with stabilizer</div>
+        </div>
+        <div class="photo-item" data-category="equipment">
+            <img src="media/images/Equipment-Maintenance.jpg" alt="Equipment maintenance demo">
+            <div class="photo-description">Monthly equipment cleaning and maintenance session</div>
+        </div>
+
+        <!-- Member Activity Category -->
+        <div class="photo-item" data-category="member">
+            <img src="media/images/Video-Production.jpg" alt="Video production session">
+            <div class="photo-description">Members collaborating on a short film project</div>
+        </div>
+        <div class="photo-item" data-category="member">
+            <img src="media/images/Member-Editing.jpg" alt="Member working on editing">
+            <div class="photo-description">Student editing documentary footage in our media lab</div>
+        </div>
+        <div class="photo-item" data-category="member">
+            <img src="media/images/Member-Presenting-Project.jpg" alt="Member presenting project">
+            <div class="photo-description">Club member explaining their photography series</div>
+        </div>
+        <div class="photo-item" data-category="member">
+            <img src="media/images/Member-Filming-Interview.jpg" alt="Member filming interview">
+            <div class="photo-description">Documentary team conducting an on-campus interview</div>
+        </div>
+
+        <!-- Field Work Category -->
+        <div class="photo-item" data-category="field">
+            <img src="media/images/Drone-Footage.jpg" alt="Drone footage screenshot">
+            <div class="photo-description">Aerial footage captured during campus tour project</div>
+        </div>
+        <div class="photo-item" data-category="field">
+            <img src="media/images/Photography-Field-Trip.jpg" alt="Photography field trip">
+            <div class="photo-description">Weekend nature photography excursion</div>
+        </div>
+        <div class="photo-item" data-category="field">
+            <img src="media/images/Behind-the-Scenes.jpg" alt="Behind the scenes footage">
+            <div class="photo-description">Making-of documentary about theater production</div>
+        </div>
+        <div class="photo-item" data-category="field">
+            <img src="media/images/Audio-Recording-Session.jpg" alt="Audio recording session">
+            <div class="photo-description">Recording podcast in our soundproof studio</div>
+        </div>
+    </div>
+
+
+<!-- Citations Section -->
+<section class="citations-section">
+    <div class="container">
+        <h2 class="citations-heading">Image Credits</h2>
+        <div class="citations-list">
+            <div class="citation-item">
+                <span class="citation-number">1.</span>
+                <span class="citation-text">"Club Event Photography" by Bukit View Primary School Multimedia Club, <a href="https://www.bukitviewpri.moe.edu.sg/bvps-experience/clubs-and-uniformed-group/multimedia-club/" target="_blank">Source</a></span>
+            </div>
+            <div class="citation-item">
+                <span class="citation-number">2.</span>
+                <span class="citation-text">"Award Ceremony" from Campaign Asia, <a href="https://www.campaignasia.com/article/singapore-media-awards-winners-announced/454110" target="_blank">Source</a></span>
+            </div>
+            <div class="citation-item">
+                <span class="citation-number">3.</span>
+                <span class="citation-text">"Event Coverage" by LiveMoments Singapore, <a href="https://www.livemoments.com.sg/event-photographers-singapore/" target="_blank">Source</a></span>
+            </div>
+            <div class="citation-item">
+                <span class="citation-number">4.</span>
+                <span class="citation-text">"Student Workshop" from Tech in Asia, <a href="https://www.techinasia.com/talk/enticing-polytechnic-students-intern-startup" target="_blank">Source</a></span>
+            </div>
+            <div class="citation-item">
+                <span class="citation-number">5.</span>
+                <span class="citation-text">"Studio Setup" by Coco Creative Studio, <a href="https://cococreativestudio.com/photography-video-studio-rental-singapore/" target="_blank">Source</a></span>
+            </div>
+            <div class="citation-item">
+                <span class="citation-number">6.</span>
+                <span class="citation-text">"Student Club Activity" from iStock, <a href="https://www.istockphoto.com/photos/student-club" target="_blank">Source</a></span>
+            </div>
+            <div class="citation-item">
+                <span class="citation-number">7.</span>
+                <span class="citation-text">"Editing Workstation" from Wallpapers.com, <a href="https://wallpapers.com/picture/editing-pictures-r095zcnzk9y70b54.html" target="_blank">Source</a></span>
+            </div>
+            <div class="citation-item">
+                <span class="citation-number">8.</span>
+                <span class="citation-text">"Video Production" from WallpaperFlare, <a href="https://www.wallpaperflare.com/man-standing-near-brown-textile-near-people-video-production-wallpaper-zaild" target="_blank">Source</a></span>
+            </div>
+            <div class="citation-item">
+                <span class="citation-number">9.</span>
+                <span class="citation-text">"Camera Equipment" from Direct Digital, <a href="https://www.direct-digital.com/en/equipment-terminology" target="_blank">Source</a></span>
+            </div>
+            <div class="citation-item">
+                <span class="citation-number">10.</span>
+                <span class="citation-text">"Member Presenting" by Yash Choudhary, <a href="https://www.freelancer.com/u/yashc319" target="_blank">Source</a></span>
+            </div>
+            <div class="citation-item">
+                <span class="citation-number">11.</span>
+                <span class="citation-text">"Camera Rig Setup" from Pexels, <a href="https://www.pexels.com/photo/professional-camera-rig-setup-for-outdoor-filmmaking-28532578/" target="_blank">Source</a></span>
+            </div>
+            <div class="citation-item">
+                <span class="citation-number">12.</span>
+                <span class="citation-text">"Equipment Maintenance" from Ikan Corp, <a href="https://ikancorp.com/3-tips-to-help-maintain-your-professional-video-equipment/" target="_blank">Source</a></span>
+            </div>
+            <div class="citation-item">
+                <span class="citation-number">13.</span>
+                <span class="citation-text">"Club Workshop" from HCIMT Facebook, <a href="https://www.facebook.com/hcimt/photos/a.956712461060396/1106410142757293/?type=3" target="_blank">Source</a></span>
+            </div>
+            <div class="citation-item">
+                <span class="citation-number">14.</span>
+                <span class="citation-text">"Lighting Workshop" from HCIMT Facebook (cropped), <a href="https://www.facebook.com/hcimt/photos/a.956712461060396/1106410142757293/?type=3" target="_blank">Source</a></span>
+            </div>
+            <div class="citation-item">
+                <span class="citation-number">15.</span>
+                <span class="citation-text">"Project Presentation" from Shutterstock, <a href="https://www.shutterstock.com/search/presentation-applaud?image_type=photo&page=7" target="_blank">Source</a></span>
+            </div>
+            <div class="citation-item">
+                <span class="citation-number">16.</span>
+                <span class="citation-text">"Behind the Scenes" from Paris American International University, <a href="https://parisamerican.org/behind-the-scenes-how-paiu-designs-its-engaging-online-courses/" target="_blank">Source</a></span>
+            </div>
+            <div class="citation-item">
+                <span class="citation-number">17.</span>
+                <span class="citation-text">"Drone Footage" from 11Alive News, <a href="https://www.11alive.com/article/news/drone-antics-in-california-example-of-why-mb-stadium-will-be-no-fly-zone-saturday/85-496298528" target="_blank">Source</a></span>
+            </div>
+            <div class="citation-item">
+                <span class="citation-number">18.</span>
+                <span class="citation-text">"Field Trip" from Alamy Stock Photos, <a href="https://www.alamy.com/stock-photo/shot-school-students.html?page=3&sortBy=relevant" target="_blank">Source</a></span>
+            </div>
+            <div class="citation-item">
+                <span class="citation-number">19.</span>
+                <span class="citation-text">"Video Editing Tutorial" by Afiqah Najla, <a href="https://www.behance.net/afiqahnajl34df?locale=nb_NO" target="_blank">Source</a></span>
+            </div>
+            <div class="citation-item">
+                <span class="citation-number">20.</span>
+                <span class="citation-text">"Audio Recording" from Stockcake, <a href="https://stockcake.com/i/studio-recording-session_548027_876302" target="_blank">Source</a></span>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+        <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Multimedia Club</h3>
+                    <p>Empowering creators through technology and collaboration since 2018</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="upcoming-events.html">Upcoming Events</a></li>
+                        <li><a href="equipment-rental.html">Equipment Rental</a></li>
+                        <li><a href="Gallery-page.html">View Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Club hours</h4>
+                            <li>
+                                <span>Monday - Thursday</span>
+                                <span>3:00 PM - 8:00 PM</span>
+                            </li>
+                            <li>
+                                <span>Friday</span>
+                                <span>2:00 PM - 6:00 PM</span>
+                            </li>
+                            <li>
+                                <span>Saturday</span>
+                                <span>10:00 AM - 4:00 PM</span>
+                            </li>
+                            <li>
+                                <span>Sunday</span>
+                                <span>Closed</span>
+                            </li>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2025 Multimedia Club | Built with 🔐 by I-Je</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/Gallery-page.js"></script>
+    <script src="js/nav-bar-footer.js"></script>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
